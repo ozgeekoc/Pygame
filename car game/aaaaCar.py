@@ -40,8 +40,7 @@ class Enemy(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = (random.randint (40, width-40), 0)
     def move (self):
-        global score 
-        #velocitysini belirledik
+        global score
         self.rect.move_ip(0,speed)
         if (self.rect.bottom > height):
             score += 1
